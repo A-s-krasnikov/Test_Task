@@ -34,13 +34,13 @@ enter3.click()
 # Ждем 5 секунд чтобы все загрузилось
 time.sleep(5)
 # Ищем кнопку написать
-toWrite = driver.find_element(By.XPATH, '//*[@id="js-apps-container"]/div[2]/div[7]/div/div[3]/nav/div[3]/div/div/div/a')
+toWrite = driver.find_element(By.XPATH, '//a[@class=\'Button2 Button2_type_link Button2_view_action Button2_size_m Layout-m__compose--3KGCi qa-LeftColumn-ComposeButton ComposeButton-m__root--3ijKP\']')
 # Жмем на кнопку написать
 toWrite.click()
 # Ждем 1 секунду чтобы появилось окно
 time.sleep(1)
 # Ищем поле для ввода почты кому
-message = driver.find_element(By.XPATH, '//*[@id="js-apps-container"]/div[2]/div[10]/div/div/div[2]/div/div[2]/div/div[1]/div[1]/div[1]/div/div[1]/div[1]/div[1]/div/div/div/div/div')
+message = driver.find_element(By.XPATH, '//div[@class=\'composeYabbles\']')
 # Вводим почту
 message.send_keys('a.s.krasnikov@yandex.ru')
 time.sleep(1)
@@ -52,13 +52,13 @@ text.click()
 text.send_keys('Отправляем тестовое сообщение')
 time.sleep(1)
 # Ищем поле с типом файл-инпут
-file = driver.find_element(By.XPATH, '//*[@id="js-apps-container"]/div[2]/div[10]/div/div/div[2]/div/div[2]/div/div[1]/div[1]/div[2]/div/div[1]/div[5]/span/span/div/input')
+file = driver.find_element(By.XPATH, '//input[@class="WithUpload-FileInput qa-Compose-FileInput"]')
 # Добавляем файл с локального компьютера
 file.send_keys('/Users/aleksandrkrasnikov/Downloads/Test.txt')
 # Ждем 5 секунд чтобы файл успешно загрузился, можно увеличить для больших файлов
 time.sleep(5)
 # Ищем кнопку отправить
-buttonSend = driver.find_element(By.XPATH, '//*[@id="js-apps-container"]/div[2]/div[10]/div/div/div[2]/div/div[2]/div/div[1]/div[1]/div[2]/div/div[1]/div[1]/button')
+buttonSend = driver.find_element(By.XPATH, '//button[@class="Button2 Button2_pin_circle-circle Button2_view_default Button2_size_l"]')
 # Жмем кнопку отправить
 buttonSend.click()
 # Ждем 15 секунд
